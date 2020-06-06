@@ -29,10 +29,12 @@ for ii in range(1, num_points):
 fig, ax = plt.subplots()
 
 # plot the points on a matplotlib scatter plot: you must write the scatterplot function yourself!
-scatter = #fill in this line with a scatterplot on ax to plot scatter_points!
+scatter = plt.scatter(scatter_points[:, 0],scatter_points[:, 1])
+#fill in this line with a scatterplot on ax to plot scatter_points!
 
 # change the scale and appearance of the axes
-scatter.axes.axis([0, 1., -0.1, 0.9])
+plt.xlim([0, 1.])
+plt.ylim([-0.1, 0.9])
 plt.axis('off')
 
 # a function to update the plot over time

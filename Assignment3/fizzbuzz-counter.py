@@ -1,28 +1,36 @@
 
-def fizz_buzz(length):
-    output_list = []
-    for x in range(0, length):
+
+fizzcounter = 0
+buzzcounter = 0
+fizzbuzzcounter = 0
+
+def fizzbuzz(length):
+
+    for x in range(0, length+1):
         if x % 3 == 0 and x % 5 == 0:
-            output_list.append('FizzBuzz')
+            print('FizzBuzz')
+            fizzbuzzcounter += 1
             
         elif x % 3 == 0:
-            output_list.append('Fizz')
-    
-        elif x % 5 == 0:
-            output_list.append('Buzz')
-     
-        else:
-            output_list.append(str(x))
+            print('Fizz')
+            fizzcounter += 1
             
-    return output_list
+        elif x % 5 == 0:
+            print('Buzz')
+            buzzcounter += 1
+            
+        else:
+            print(x)
 
 
-'''
-length = input('Let us have fun with fizzbuzz! Give me a number!')
+print("____________________________________")
+print("Fizz\tBuzz\tFizzbuzz")
+print(str(fizzcounter) + "\t" + str(buzzcounter) + "\t" + str(fizzbuzzcounter))
+
+
+length = input('Let us play fizzbuzz! Give me a number!')
 n = int(length)
-print fizz_buzz(n)
-'''
-
+fizzbuzz(n)
 
 
 
